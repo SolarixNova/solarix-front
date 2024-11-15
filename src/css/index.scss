@@ -1,0 +1,20 @@
+@import 'beneficios';
+@import 'hero';
+@import 'main';
+@import 'header';
+
+
+$cor-verde-sec: #8dc9a4;
+$cor-preta: #000000;
+$cor-branca: #ffffff;
+$fonte-principal: "Space Grotesk", sans-serif;
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Space Grotesk", sans-serif;
+}

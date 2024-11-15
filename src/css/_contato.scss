@@ -17,9 +17,15 @@ body {
     }
     .negocios {
         grid-area: negocios;
+        a {
+            color: #212529;
+        }
     }
     .sobrenos {
         grid-area: sobrenos;
+        a {
+            color: #212529;
+        }
     }
     .faleconosco {
         grid-area: faleconosco;
@@ -41,6 +47,9 @@ body {
     }  
     h2 {
         color: $cor-verde-sec;
+    }
+    a {
+        text-decoration: none;
     }
     @media (max-width:1300px) {
         .negocios,.sobrenos,.faleconosco {

@@ -526,8 +526,14 @@ body {
 .contato .negocios {
   grid-area: negocios;
 }
+.contato .negocios a {
+  color: #212529;
+}
 .contato .sobrenos {
   grid-area: sobrenos;
+}
+.contato .sobrenos a {
+  color: #212529;
 }
 .contato .faleconosco {
   grid-area: faleconosco;
@@ -550,6 +556,9 @@ body {
 }
 .contato h2 {
   color: #8dc9a4;
+}
+.contato a {
+  text-decoration: none;
 }
 @media (max-width: 1300px) {
   .contato .negocios, .contato .sobrenos, .contato .faleconosco {

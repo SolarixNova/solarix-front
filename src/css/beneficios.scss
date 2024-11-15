@@ -3,12 +3,15 @@
 $cor-branca: #FFFFFF;
 $cor-amarela: #F8BC19;
 $cor-verde: #19F820;
+$cor-verde-sec: #8dc9a4;
 
 body {
     font-family: "Space Grotesk", sans-serif;
 }
 
-.card-img-overlay {
+
+.beneficios {
+    background-color: #f2f8f5;
     height: 100vh;
 }
 
@@ -44,15 +47,16 @@ body {
         border-radius: 60px;
         font-size: 26px;
         padding: 1.5rem;
-        background-color: $cor-branca;
+        background-color: $cor-verde-sec;
         color: #000000;
         border: none;
         border-color: $cor-amarela;
         font-family: "Space Grotesk", sans-serif;
         &:hover {
-            background-color: transparent;
+            background-color: #f2f8f5;
             transition: .7s;
-            border: white 1px solid;
+            border: $cor-verde-sec 1px solid;
+            color: $cor-verde-sec;
         }
         @media (max-width: 600px) {
             width: 17rem;
@@ -86,7 +90,7 @@ body {
         margin-top: 25rem;
     }
     div {
-        background-color: rgba(255, 255, 255, 0.466);
+        background-color: $cor-verde-sec;
         color: black;
         padding: 20px;
         text-align: center;
@@ -95,10 +99,6 @@ body {
         width: 15rem;
         font-family: "Space Grotesk", sans-serif;  
         cursor: pointer;
-        @media (max-width: 600px) {
-            background-color: black;
-            color: white;
-        }
         
         h5 {
             margin-bottom: 10px;
@@ -125,6 +125,8 @@ body {
         }
     }
 }
+
+
 
 
 

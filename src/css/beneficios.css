@@ -3,7 +3,8 @@ body {
   font-family: "Space Grotesk", sans-serif;
 }
 
-.card-img-overlay {
+.beneficios {
+  background-color: #f2f8f5;
   height: 100vh;
 }
 
@@ -34,16 +35,17 @@ body {
   border-radius: 60px;
   font-size: 26px;
   padding: 1.5rem;
-  background-color: #FFFFFF;
+  background-color: #8dc9a4;
   color: #000000;
   border: none;
   border-color: #F8BC19;
   font-family: "Space Grotesk", sans-serif;
 }
 .container-titulos button:hover {
-  background-color: transparent;
+  background-color: #f2f8f5;
   transition: 0.7s;
-  border: white 1px solid;
+  border: #8dc9a4 1px solid;
+  color: #8dc9a4;
 }
 @media (max-width: 600px) {
   .container-titulos button {
@@ -82,7 +84,7 @@ body {
   }
 }
 .secao-beneficios div {
-  background-color: rgba(255, 255, 255, 0.466);
+  background-color: #8dc9a4;
   color: black;
   padding: 20px;
   text-align: center;
@@ -91,12 +93,6 @@ body {
   width: 15rem;
   font-family: "Space Grotesk", sans-serif;
   cursor: pointer;
-}
-@media (max-width: 600px) {
-  .secao-beneficios div {
-    background-color: black;
-    color: white;
-  }
 }
 .secao-beneficios div h5 {
   margin-bottom: 10px;

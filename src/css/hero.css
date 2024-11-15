@@ -12,4 +12,9 @@
   border: white solid 1px;
   transition: 0.7s;
   color: white;
+}
+@media (max-width: 1050px) {
+  .hero button {
+    display: none;
+  }
 }/*# sourceMappingURL=hero.css.map */

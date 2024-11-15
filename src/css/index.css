@@ -502,49 +502,24 @@ body {
 .contato {
   display: grid;
   margin: 5rem 5rem;
-  grid-template-areas: "titulo negocios solarix faleconosco contato" "subtitulo python hub trabalhe caso" "subtitulo edge sobre politica email";
+  grid-template-areas: "titulo-contato negocios sobrenos faleconosco email";
 }
 .contato .titulo-contato {
-  grid-area: titulo;
+  grid-area: titulo-contato;
 }
 .contato .negocios {
   grid-area: negocios;
 }
-.contato .asolarix {
-  grid-area: solarix;
+.contato .sobrenos {
+  grid-area: sobrenos;
 }
 .contato .faleconosco {
   grid-area: faleconosco;
 }
-.contato .entrecontato {
-  grid-area: contato;
-}
-.contato .subtitulo-contato {
-  grid-area: subtitulo;
-}
-.contato .python {
-  grid-area: python;
-}
-.contato .hub {
-  grid-area: hub;
-}
-.contato .trabalhe {
-  grid-area: trabalhe;
-}
-.contato .caso {
-  grid-area: caso;
-}
-.contato .edge {
-  grid-area: edge;
-}
-.contato .sobrenos {
-  grid-area: sobre;
-}
-.contato .politica {
-  grid-area: politica;
-}
-.contato input {
+.contato .email {
   grid-area: email;
+}
+.contato .email input {
   width: 20rem;
   padding: 1.5rem;
   background-color: #ffffff;
@@ -552,8 +527,26 @@ body {
   border-radius: 60px;
   font-size: 20px;
 }
+@media (max-width: 460px) {
+  .contato .email input {
+    width: 12rem;
+  }
+}
 .contato h2 {
   color: #8dc9a4;
+}
+@media (max-width: 1300px) {
+  .contato .negocios, .contato .sobrenos, .contato .faleconosco {
+    display: none;
+  }
+}
+@media (max-width: 670px) {
+  .contato {
+    grid-template-areas: "titulo-contato" "email";
+  }
+  .contato .email {
+    margin-top: 5rem;
+  }
 }
 
 * {

@@ -2,59 +2,50 @@
     display: grid;
     margin: 5rem 5rem;
     grid-template-areas: 
-        "titulo negocios solarix faleconosco contato"
-        "subtitulo python hub trabalhe caso"
-        "subtitulo edge sobre politica email"
+        "titulo-contato negocios sobrenos faleconosco email" 
     ;
     .titulo-contato {
-        grid-area: titulo;
+        grid-area: titulo-contato;
     }
     .negocios {
         grid-area: negocios;
     }
-    .asolarix {
-        grid-area: solarix;
+    .sobrenos {
+        grid-area: sobrenos;
     }
     .faleconosco {
         grid-area: faleconosco;
     }
-    .entrecontato {
-        grid-area: contato;
-    }
-    .subtitulo-contato {
-        grid-area: subtitulo;
-    }
-    .python {
-        grid-area:python;
-    }
-    .hub {
-        grid-area: hub;
-    }
-    .trabalhe {
-        grid-area: trabalhe;
-    }
-    .caso {
-        grid-area: caso;
-    }
-    .edge {
-        grid-area: edge;
-    }
-    .sobrenos {
-        grid-area: sobre;
-    }
-    .politica {
-        grid-area: politica;
-    }
-    input {
+    .email {
         grid-area: email;
-        width: 20rem;
-        padding: 1.5rem;
-        background-color: $cor-branca;
-        border: 1px $cor-verde-sec solid;
-        border-radius: 60px;
-        font-size: 20px;
-    }
+        input {
+            width: 20rem;
+            padding: 1.5rem;
+            background-color: $cor-branca;
+            border: 1px $cor-verde-sec solid;
+            border-radius: 60px;
+            font-size: 20px;
+            @media(max-width:460px) {
+                width: 12rem;
+            }
+        }
+
+    }  
     h2 {
         color: $cor-verde-sec;
+    }
+    @media (max-width:1300px) {
+        .negocios,.sobrenos,.faleconosco {
+            display: none;
+        }
+    }
+    @media (max-width:670px) {
+        grid-template-areas: 
+            "titulo-contato"
+            "email"
+        ;
+        .email {
+            margin-top: 5rem;
+        }
     }
 }

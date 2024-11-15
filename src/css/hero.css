@@ -1,1 +1,15 @@
-/*# sourceMappingURL=hero.css.map */
+.hero button {
+  padding: 1rem;
+  background-color: white;
+  border: none;
+  border-radius: 60px;
+  width: 20rem;
+  margin-top: 4rem;
+  font-size: 30px;
+}
+.hero button:hover {
+  background-color: transparent;
+  border: white solid 1px;
+  transition: 0.7s;
+  color: white;
+}/*# sourceMappingURL=hero.css.map */

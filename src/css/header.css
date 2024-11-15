@@ -41,6 +41,12 @@ body {
   background-color: #FFFFFF;
   border: none;
 }
+.header nav button:hover {
+  background-color: transparent;
+  border: white solid 1px;
+  transition: 0.7s;
+  color: white;
+}
 .header section {
   text-align: center;
   margin-top: 8rem;

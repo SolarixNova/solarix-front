@@ -43,6 +43,12 @@ body {
             border-radius: 40px;
             background-color: $cor-branca;
             border: none;
+            &:hover {
+                background-color: transparent;
+                border: white solid 1px;
+                transition: .7s;
+                color: white;
+            }
         }
     }
     section {

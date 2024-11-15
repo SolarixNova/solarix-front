@@ -1,0 +1,51 @@
+@import 'variaveis';
+
+.rodape {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 5rem;
+    background-color: #f2f8f5;
+    @media (max-width:650px) {
+        flex-direction: column;
+    }
+    .redes {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 2rem;
+        .icones {
+            background-color: $cor-branca;
+            padding: 1rem;
+            border-radius: 50%;
+            cursor: pointer;
+            &:hover {
+                background-color: $cor-verde-sec;
+                transition: .7s;
+                #icone1 {
+                    color: $cor-branca;
+                    transition: .7s;
+                }
+            }
+            #icone1 {
+                color: $cor-verde-sec;
+            }
+        }
+        .icones2 {
+            background-color: $cor-branca;
+            padding: 1rem;
+            border-radius: 50%;
+            cursor: pointer;
+            &:hover {
+                background-color: $cor-verde-sec;
+                transition: .7s;
+                #icone2 {
+                    color: $cor-branca;
+                    transition: .7s;
+                }
+            }
+    
+            #icone2 {
+                color: $cor-verde-sec;
+            }
+      }
+    }
+}

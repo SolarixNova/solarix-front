@@ -12,7 +12,6 @@ body {
 
 .beneficios {
     background-color: #f2f8f5;
-    height: 100vh;
 }
 
 .container-titulos {
@@ -90,8 +89,9 @@ body {
         margin-top: 25rem;
     }
     div {
-        background-color: $cor-verde-sec;
-        color: black;
+        background-color: #f2f8f5;
+        border: $cor-verde-sec 1px solid;
+        color: $cor-verde-sec;
         padding: 20px;
         text-align: center;
         border-radius: 8px;
@@ -112,9 +112,6 @@ body {
             transition: opacity 0.8s ease, max-height 1.5s ease;
             font-size: 0.9em;
             color: #555;
-            @media (max-width: 600px) {
-                color: white;
-            }
         }
     }
 }
@@ -125,10 +122,19 @@ body {
 
 .cartao1:hover,.cartao2:hover,.cartao3:hover,.cartao4:hover,.cartao5:hover,.cartao6:hover,.cartao7:hover,.cartao8:hover {
     max-height: 300px;
+    background-color: white;
+    transition: .7s;
     .descricao {
         opacity: 1;
         max-height: 200px;
     }
+}
+
+.desafios-beneficios {
+    margin-left: 15rem;
+    margin-top: 5rem;
+    border-bottom: $cor-verde-sec 4px solid;
+    width: 60vw;
 }
 
 

@@ -10,8 +10,15 @@ main {
   margin-left: 50px;
   margin-right: 50px;
 }
+main h5 {
+  margin-top: 30px;
+  margin-left: 80px;
+  width: 90vw;
+  font-size: 40px;
+  border-bottom: 4px solid hsl(143, 36%, 67%);
+}
 
-h5 {
+.titulo-energias {
   margin-top: 30px;
   margin-left: 80px;
   width: 90vw;

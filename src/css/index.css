@@ -548,6 +548,7 @@ body {
   border: 1px #8dc9a4 solid;
   border-radius: 60px;
   font-size: 20px;
+  outline: none;
 }
 @media (max-width: 460px) {
   .contato .email input {

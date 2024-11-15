@@ -39,6 +39,7 @@ body {
             border: 1px $cor-verde-sec solid;
             border-radius: 60px;
             font-size: 20px;
+            outline: none;
             @media(max-width:460px) {
                 width: 12rem;
             }

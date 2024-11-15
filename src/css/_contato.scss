@@ -1,0 +1,60 @@
+.contato {
+    display: grid;
+    margin: 5rem 5rem;
+    grid-template-areas: 
+        "titulo negocios solarix faleconosco contato"
+        "subtitulo python hub trabalhe caso"
+        "subtitulo edge sobre politica email"
+    ;
+    .titulo-contato {
+        grid-area: titulo;
+    }
+    .negocios {
+        grid-area: negocios;
+    }
+    .asolarix {
+        grid-area: solarix;
+    }
+    .faleconosco {
+        grid-area: faleconosco;
+    }
+    .entrecontato {
+        grid-area: contato;
+    }
+    .subtitulo-contato {
+        grid-area: subtitulo;
+    }
+    .python {
+        grid-area:python;
+    }
+    .hub {
+        grid-area: hub;
+    }
+    .trabalhe {
+        grid-area: trabalhe;
+    }
+    .caso {
+        grid-area: caso;
+    }
+    .edge {
+        grid-area: edge;
+    }
+    .sobrenos {
+        grid-area: sobre;
+    }
+    .politica {
+        grid-area: politica;
+    }
+    input {
+        grid-area: email;
+        width: 20rem;
+        padding: 1.5rem;
+        background-color: $cor-branca;
+        border: 1px $cor-verde-sec solid;
+        border-radius: 60px;
+        font-size: 20px;
+    }
+    h2 {
+        color: $cor-verde-sec;
+    }
+}

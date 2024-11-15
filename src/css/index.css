@@ -119,6 +119,10 @@ body {
   max-height: 110px;
 }
 
+.cartao5, .cartao6, .cartao7, .cartao8 {
+  margin-bottom: 3rem;
+}
+
 .cartao1:hover, .cartao2:hover, .cartao3:hover, .cartao4:hover, .cartao5:hover, .cartao6:hover, .cartao7:hover, .cartao8:hover {
   max-height: 300px;
   background-color: white;
@@ -495,6 +499,63 @@ body {
     border-color: black;
   }
 }
+.contato {
+  display: grid;
+  margin: 5rem 5rem;
+  grid-template-areas: "titulo negocios solarix faleconosco contato" "subtitulo python hub trabalhe caso" "subtitulo edge sobre politica email";
+}
+.contato .titulo-contato {
+  grid-area: titulo;
+}
+.contato .negocios {
+  grid-area: negocios;
+}
+.contato .asolarix {
+  grid-area: solarix;
+}
+.contato .faleconosco {
+  grid-area: faleconosco;
+}
+.contato .entrecontato {
+  grid-area: contato;
+}
+.contato .subtitulo-contato {
+  grid-area: subtitulo;
+}
+.contato .python {
+  grid-area: python;
+}
+.contato .hub {
+  grid-area: hub;
+}
+.contato .trabalhe {
+  grid-area: trabalhe;
+}
+.contato .caso {
+  grid-area: caso;
+}
+.contato .edge {
+  grid-area: edge;
+}
+.contato .sobrenos {
+  grid-area: sobre;
+}
+.contato .politica {
+  grid-area: politica;
+}
+.contato input {
+  grid-area: email;
+  width: 20rem;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border: 1px #8dc9a4 solid;
+  border-radius: 60px;
+  font-size: 20px;
+}
+.contato h2 {
+  color: #8dc9a4;
+}
+
 * {
   padding: 0;
   margin: 0;

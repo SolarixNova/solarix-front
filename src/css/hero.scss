@@ -1,3 +1,5 @@
+@import 'variaveis';
+
 .hero {
     button {
         padding: 1rem;
@@ -9,9 +11,9 @@
         font-size: 30px;
         &:hover {
             background-color: transparent;
-            border: white solid 1px;
+            border: $cor-branca solid 1px;
             transition: .7s;
-            color: white;
+            color: $cor-branca;
         }
     @media (max-width: 1050px) {
         display: none;

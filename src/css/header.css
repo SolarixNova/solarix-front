@@ -52,7 +52,7 @@ body {
   animation: typing 5s steps(12, end) infinite, blink 0.5s step-end infinite;
 }
 .header nav h1 {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .header nav .links {
   display: flex;
@@ -62,13 +62,13 @@ body {
 .header nav .links a {
   text-decoration: none;
   font-size: 23px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .header nav button {
   font-size: 23px;
   padding: 1.2rem;
   border-radius: 40px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border: none;
 }
 .header nav button:hover {
@@ -85,7 +85,7 @@ body {
 .header section {
   text-align: center;
   margin-top: 8rem;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 @media (max-width: 960px) {
   .header section {

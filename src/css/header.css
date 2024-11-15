@@ -21,6 +21,16 @@ body {
   padding: 1rem;
   flex-wrap: wrap;
 }
+.header nav .animacao-solarix {
+  display: inline-block;
+  font-family: monospace;
+  font-size: 2em;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid black;
+  width: 0;
+  animation: typing 5s steps(12, end) infinite, blink 0.5s step-end infinite;
+}
 .header nav h1 {
   color: #FFFFFF;
 }
@@ -57,4 +67,24 @@ body {
 }
 .header section p {
   font-size: 30px;
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+@keyframes blink {
+  0%, 50% {
+    border-color: transparent;
+  }
+  51%, 100% {
+    border-color: black;
+  }
 }/*# sourceMappingURL=header.css.map */

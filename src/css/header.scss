@@ -24,6 +24,17 @@ body {
         justify-content: space-between;
         padding: 1rem;
         flex-wrap: wrap;
+        .animacao-solarix {
+            display: inline-block;
+            font-family: monospace;
+            font-size: 2em;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid black;
+            width: 0;
+            animation: typing 5s steps(12, end) infinite, 
+                       blink 0.5s step-end infinite;
+          }
         h1 {
             color: $cor-branca;
         }
@@ -64,6 +75,27 @@ body {
     }
 
 }
+
+@keyframes typing {
+    0% {
+      width: 0;
+    }
+    50% {
+      width: 100%;
+    }
+    100% {
+      width: 0;
+    }
+  }
+  
+  @keyframes blink {
+    0%, 50% {
+      border-color: transparent;
+    }
+    51%, 100% {
+      border-color: black;
+    }
+  }
 
 
 

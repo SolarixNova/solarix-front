@@ -127,7 +127,8 @@ body {
 
 .cartao1:hover, .cartao2:hover, .cartao3:hover, .cartao4:hover, .cartao5:hover, .cartao6:hover, .cartao7:hover, .cartao8:hover {
   max-height: 300px;
-  background-color: white;
+  background-color: #8dc9a4;
+  color: #ffffff;
   transition: 0.7s;
 }
 .cartao1:hover .descricao, .cartao2:hover .descricao, .cartao3:hover .descricao, .cartao4:hover .descricao, .cartao5:hover .descricao, .cartao6:hover .descricao, .cartao7:hover .descricao, .cartao8:hover .descricao {
@@ -247,6 +248,10 @@ main p {
     justify-items: center;
   }
 }
+main .card > * {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
 main .card {
   display: grid;
   place-items: center;
@@ -263,17 +268,13 @@ main .card {
     margin-bottom: 20px;
   }
 }
-main .card > * {
-  grid-column: 1/2;
-  grid-row: 1/2;
-}
-main .card__background {
+main .card .card-fundo {
   object-fit: cover;
   max-width: 100%;
   height: 100%;
+  transition: transform 500ms ease-in;
 }
-main .card__content {
-  --flow-space: 0.9375rem;
+main .card .card-conteudo {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -281,97 +282,71 @@ main .card__content {
   height: 55%;
   padding: 12% 1.25rem 1.875rem;
   background: linear-gradient(180deg, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, 0.3) 10%, hsl(0, 0%, 0%) 100%);
+  transform: translateY(62%);
+  transition: transform 500ms ease-out;
+  transition-delay: 500ms;
 }
-main .card__content--container {
-  --flow-space: 1.25rem;
-}
-main .card__title {
+main .card .card-conteudo .card-secao .card-titulo {
   position: relative;
   width: fit-content;
   width: -moz-fit-content;
 }
-main .card__title::after {
+main .card .card-conteudo .card-secao .card-titulo::after {
   content: "";
   position: absolute;
-  height: 0.3125rem;
+  height: 0.3rem;
   width: calc(100% + 1.25rem);
   bottom: -0.75rem;
   left: -1.25rem;
   background-color: #8dc9a4;
 }
-main .card__button {
-  padding: 0.75em 1.6em;
-  width: fit-content;
-  width: -moz-fit-content;
-  font-variant: small-caps;
-  font-weight: bold;
-  border-radius: 0.45em;
-  border: none;
-  background-color: #8dc9a4;
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 1.125rem;
-  color: #000000;
+main .card:focus-within .card-conteudo {
+  transition-duration: 0ms;
 }
-main .card__button:focus {
-  outline: 2px solid black;
-  outline-offset: -5px;
+main .card:hover:focus-within {
+  transform: scale(1.05);
+  transition: transform 500ms ease-in;
+}
+main .card:hover .card-conteudo, main .card :focus-within .card-conteudo {
+  transform: translateY(0);
+  transition: transform 500ms ease-in;
+}
+main .card:hover .card-fundo, main .card :focus-within .card-fundo {
+  transform: scale(1.3);
 }
 
-@media (any-hover: hover) and (any-pointer: fine) {
-  .card__content {
-    transform: translateY(62%);
-    transition: transform 500ms ease-out;
-    transition-delay: 500ms;
-  }
-  .card__title::after {
-    opacity: 0;
-    transform: scaleX(0);
-    transition: opacity 1000ms ease-in, transform 500ms ease-out;
-    transition-delay: 500ms;
-    transform-origin: right;
-  }
-  .card__background {
-    transition: transform 500ms ease-in;
-  }
-  .card__content--container > :not(.card__title),
-  .card__button {
-    opacity: 0;
-    transition: transform 500ms ease-out, opacity 500ms ease-out;
-  }
-  .card:hover,
-  .card:focus-within {
-    transform: scale(1.05);
-    transition: transform 500ms ease-in;
-  }
-  .card:hover .card__content,
-  .card:focus-within .card__content {
-    transform: translateY(0);
-    transition: transform 500ms ease-in;
-  }
-  .card:focus-within .card__content {
-    transition-duration: 0ms;
-  }
-  .card:hover .card__background,
-  .card:focus-within .card__background {
-    transform: scale(1.3);
-  }
-  .card:hover .card__content--container > :not(.card__title),
-  .card:hover .card__button,
-  .card:focus-within .card__content--container > :not(.card__title),
-  .card:focus-within .card__button {
-    opacity: 1;
-    transition: opacity 500ms ease-in;
-    transition-delay: 1000ms;
-  }
-  .card:hover .card__title::after,
-  .card:focus-within .card__title::after {
-    opacity: 1;
-    transform: scaleX(1);
-    transform-origin: left;
-    transition: opacity 500ms ease-in, transform 500ms ease-in;
-    transition-delay: 500ms;
-  }
+.card-titulo::after {
+  opacity: 0;
+  transform: scaleX(0);
+  transition: opacity 1000ms ease-in, transform 500ms ease-out;
+  transition-delay: 500ms;
+  transform-origin: right;
 }
+
+.card-secao > :not(.card-titulo),
+.card__button {
+  opacity: 0;
+  transition: transform 500ms ease-out, opacity 500ms ease-out;
+}
+
+.card:hover .card-secao > :not(.card-titulo),
+.card:hover .card__button,
+.card:focus-within .card-secao > :not(.card-titulo),
+.card:focus-within .card__button {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+  transition-delay: 1000ms;
+}
+
+.card:hover .card-titulo::after,
+.card:focus-within .card-titulo::after {
+  opacity: 1;
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: opacity 500ms ease-in, transform 500ms ease-in;
+  transition-delay: 500ms;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -541,9 +516,20 @@ body {
 .contato .email {
   grid-area: email;
 }
-.contato .email input {
+.contato .email nav {
+  margin: 0;
+  padding: 0;
+}
+.contato .email nav div {
+  margin: 0;
+  padding: 0;
+}
+.contato .email nav div form {
+  margin-top: 1rem;
+}
+.contato .email nav div form input {
   width: 20rem;
-  padding: 1.5rem;
+  padding: 1rem;
   background-color: #ffffff;
   border: 1px #8dc9a4 solid;
   border-radius: 60px;
@@ -551,9 +537,18 @@ body {
   outline: none;
 }
 @media (max-width: 460px) {
-  .contato .email input {
+  .contato .email nav div form input {
     width: 12rem;
   }
+}
+.contato .email nav div form button {
+  border-radius: 60px;
+  border: #8dc9a4 2px solid;
+  background-color: #ffffff;
+}
+.contato .email nav div form button:hover {
+  background-color: #8dc9a4;
+  transition: 0.7s;
 }
 .contato h2 {
   color: #8dc9a4;
@@ -562,7 +557,9 @@ body {
   text-decoration: none;
 }
 @media (max-width: 1300px) {
-  .contato .negocios, .contato .sobrenos, .contato .faleconosco {
+  .contato .negocios,
+  .contato .sobrenos,
+  .contato .faleconosco {
     display: none;
   }
 }
